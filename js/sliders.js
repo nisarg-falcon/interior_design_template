@@ -8,8 +8,14 @@ var swiper = new Swiper('.floatingSlider__slider', {
 });
 var projects = new Swiper('.projects_slider', {
     slidesPerView: 2,
-    centeredSlides: true,
     autoplay: {
         delay: 6000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          centeredSlides: true
+        },
       }
 });

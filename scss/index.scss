@@ -382,6 +382,7 @@ body{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        width: 20%;
                     }
                     span{
                         display: flex;
@@ -396,7 +397,7 @@ body{
               }
           }
       } 
-      .achievements{
+      .jm_section{
           display: flex;
           justify-content: center;
           align-items: center;
@@ -409,7 +410,6 @@ body{
               display: flex;
               justify-content: flex-start;
                align-items: flex-start;
-               // margin-top: 15%;
                height: 100%;
                padding: 32px 60px;
               flex-direction: column;
@@ -468,6 +468,9 @@ body{
                       border: none;
                       background-color: $secondary;
                       margin-left: 22px;
+                      @include media('<=tablet'){
+                        width: 20%;
+                    }
                       span{
                           display: flex;
                           justify-content: center;
@@ -544,15 +547,25 @@ body{
           display: flex;
           padding: 20px 0px;
           height: 80vh;
+          @include media('<=tablet'){
+              height: 100%;
+              flex-direction: column-reverse;
+          }
           &__column1{
               width: 40%;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
                 flex-direction: column;
+                @include media('<=tablet'){
+                    width: 100%;
+                }
           }
           &__column2{
             width: 60%;
+            @include media('<=tablet'){
+                width: 100%;
+            }
           }
           &__txt{
               padding: 10px 60px;
@@ -560,6 +573,9 @@ body{
               justify-content: flex-end;
               align-items: flex-start;
               flex-direction: column;
+              @include media('<=tablet'){
+                padding: 10px 0px;
+            }
               &__h1{
                 font-size: 48px;
                 padding: 20px 22px;
@@ -602,9 +618,15 @@ body{
                       display: flex;
                       justify-content: center;
                       align-items: center;
+                      @include media('<=600px'){
+                          height: 400px;
+                      }
                       img{
                           height: 400px;
                           object-fit: initial;
+                          @include media('<=600px'){
+                            height: 200px;
+                        }
                       }
                   }
                   .swiper-slide-active{
@@ -614,6 +636,10 @@ body{
           }
           &__explore{
               padding: 10px 60px;
+              width: 100%;
+              @include media('<=tablet'){
+                padding: 10px 0px;
+            }
               a{
                 padding: 10px 35px;
                 display: flex;
@@ -625,6 +651,9 @@ body{
                 border: none;
                 background-color: $secondary;
                 margin-left: 22px;
+                @include media('<=tablet'){
+                    width: 20%;
+                }
                 span{
                     display: flex;
                     justify-content: center;
